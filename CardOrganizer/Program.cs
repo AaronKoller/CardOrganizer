@@ -2,6 +2,10 @@
 using Autofac;
 using CardOrganizer.Interfaces;
 
+//Shiftwise Code Challenge
+//Author: Aaron Koller
+//Date:   May 8th, 2017
+
 namespace CardOrganizer
 {
     internal class Program
