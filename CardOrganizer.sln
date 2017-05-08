@@ -7,12 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardOrganizer", "CardOrgani
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "UnitTests\Tests.csproj", "{955B57A1-FB31-4355-957A-19C16A2C5E33}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dll Dependancies", "Dll Dependancies", "{E66EFB41-BD88-41F9-9775-AA598AE27630}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dll Dependencies", "Dll Dependencies", "{E66EFB41-BD88-41F9-9775-AA598AE27630}"
 	ProjectSection(SolutionItems) = preProject
-		Dll Dependancies\Autofac.dll = Dll Dependancies\Autofac.dll
-		Dll Dependancies\Castle.Core.dll = Dll Dependancies\Castle.Core.dll
-		Dll Dependancies\Moq.dll = Dll Dependancies\Moq.dll
-		Dll Dependancies\nunit.framework.dll = Dll Dependancies\nunit.framework.dll
+		Dll Dependencies\Autofac.dll = Dll Dependencies\Autofac.dll
+		Dll Dependencies\Castle.Core.dll = Dll Dependencies\Castle.Core.dll
+		Dll Dependencies\Moq.dll = Dll Dependencies\Moq.dll
+		Dll Dependencies\nunit.framework.dll = Dll Dependencies\nunit.framework.dll
 	EndProjectSection
 EndProject
 Global

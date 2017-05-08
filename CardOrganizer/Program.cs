@@ -22,7 +22,11 @@ namespace CardOrganizer
                 //Gives us the object with all of its depenances resolved
                 var game = container.Resolve<IGame>();
 
+                //With Inversion of Control
                 game.Start();
+
+                //Without Inversion of Control
+                //new Game(new Deck(new CardClassic())).Start();
             }
             catch (Exception ex)
             {
