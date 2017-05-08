@@ -6,7 +6,7 @@ using NUnit.Framework;
 
 namespace Tests.UnitTests.Models
 {
-    class DeckTests
+    class DeckUnitTests
     {
         private Mock<ICard> _card;
         private IDeck _deck;
@@ -19,11 +19,11 @@ namespace Tests.UnitTests.Models
         }
 
         [Test]
-        public void Create()
+        public void Create_intArrays_returnsMultipleOfLengthsOfArrays()
         {
             //Arrange
             var suits = new List<int> {1, 2};
-            var names = new List<int> { 1, 2, 3};
+            var names = new List<int> {1, 2, 3};
             _card.Setup(c => c.ValueSuits).Returns(suits);
             _card.Setup(c => c.ValueNames).Returns(names);
 

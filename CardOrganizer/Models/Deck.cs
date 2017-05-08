@@ -7,14 +7,14 @@ namespace CardOrganizer
 {
     public class Deck : IDeck
     {
-        private readonly List<ICard> _deck;
+        private List<ICard> _deck;
         private readonly ICard _card;
         private readonly Random _random = new Random();
-        public List<ICard> Cards { get; private set; }
+
+        public List<ICard> Cards => _deck;
 
         public Deck()
         {
-                
         }
 
         public Deck(ICard card)
@@ -25,10 +25,13 @@ namespace CardOrganizer
         }
 
         /// <summary>
-        /// Creates a new list of ordered cards
+        /// Creates / recreates a new list of ordered cards.
         /// </summary>
-        public virtual List<ICard> Create()
-        {
+        public virtual List<ICard> Create() {
+
+            //ensures that we always have a new deck of the proper length
+            _deck = new List<ICard>();
+
             foreach (int valueSuit in _card.ValueSuits)
             {
                 foreach (int valueName in _card.ValueNames)
@@ -36,15 +39,15 @@ namespace CardOrganizer
                     _deck.Add(_card.Create(valueSuit, valueName));
                 }
             }
-            return Cards = _deck;
+            return _deck;
         }
         
         /// <summary>
-        ///     Sort a deck of cards
+        ///     Sort a deck of cards.
         /// </summary>
         public virtual List<ICard> Sort()
         {
-            return Cards = Cards.OrderBy(a => a.ValueSuit).ThenBy(b => b.ValueName).ToList();
+            return _deck = Cards.OrderBy(a => a.ValueSuit).ThenBy(b => b.ValueName).ToList();
         }
 
         /// <summary>
@@ -56,7 +59,7 @@ namespace CardOrganizer
             {
                 Swap(_deck, i, _random.Next(i, Cards.Count));
             }
-            return Cards;
+            return _deck;
         }
 
         /// <summary>

@@ -6,13 +6,12 @@ using NUnit.Framework;
 
 namespace Tests.IntegrationTests.Models
 {
-    class DeckTests
+    class DeckIntegrationTests
     {
         private ICard _card;
         private IDeck _deck;
         private IDeck _deck2;
         private readonly Random _random = new Random();
-
         
         [SetUp]
         public void Setup()
@@ -20,6 +19,20 @@ namespace Tests.IntegrationTests.Models
             _card = new CardClassic();
             _deck = new Deck(_card);
             _deck2 = new Deck(_card);
+        }
+
+        [Test]
+        public void Create_multipleCreates_returnsSingleInstanceOfCards()
+        {
+            //Arrange
+            int countOfCardsBefore =  _deck.Cards.Count;
+
+            //Act
+            _deck.Create();
+            int countOfCardsAfter = _deck.Cards.Count;
+
+            //Assert
+            Assert.AreEqual(countOfCardsBefore, countOfCardsAfter);
         }
 
         [Test]
@@ -38,7 +51,6 @@ namespace Tests.IntegrationTests.Models
                 Assert.AreEqual(_deck.Cards[i].ValueSuit, _deck2.Cards[i].ValueSuit);
             }
         }
-
 
         [Test]
         public void Swap_RandomIndexes_ReturnsSwappedIndexes()

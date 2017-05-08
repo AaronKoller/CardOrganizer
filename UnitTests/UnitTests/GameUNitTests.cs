@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace Tests.UnitTests
 {
     [TestFixture]
-    class GameTests
+    class GameUnitTests
     {
         private Game _game;
         private Mock<Deck> _deck;
@@ -16,7 +16,6 @@ namespace Tests.UnitTests
             _deck = new Mock<Deck>();
             _game = new Game(_deck.Object);
         }
-
 
         [Test]
         public void OrganizeCards_CallsAllMethods_ReturnsExecutionCountOnceOfMethods()
