@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.InteropServices;
 
-namespace CardOrganizer
+namespace CardOrganizer.Interfaces
 {
     public interface ICard
     {

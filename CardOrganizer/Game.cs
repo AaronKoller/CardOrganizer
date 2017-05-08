@@ -1,12 +1,14 @@
-﻿namespace CardOrganizer
-{
-    public class Game
-    {
-        private readonly ICard _card;
+﻿using CardOrganizer.Interfaces;
 
-        public Game(ICard card)
+namespace CardOrganizer
+{
+    public class Game : IGame
+    {
+        private readonly IDeck _deck;
+
+        public Game(IDeck deck)
         {
-            _card = card;
+            _deck = deck;
         }
 
         /// <summary>
@@ -14,9 +16,8 @@
         /// </summary>
         public void Start()
         {
-            var deck = new Deck(_card);
-            deck.Shuffle();
-            deck.Sort();
+            _deck.Shuffle();
+            _deck.Sort();
         }
     }
 }

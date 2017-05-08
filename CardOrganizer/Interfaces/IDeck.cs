@@ -9,5 +9,9 @@ namespace CardOrganizer.Interfaces
         List<ICard> Shuffle();
 
         List<ICard> Sort();
+
+        List<ICard> Cards { get; }
+
+        void Swap(List<ICard> cards, int i, int j);
     }
 }

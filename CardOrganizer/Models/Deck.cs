@@ -12,6 +12,11 @@ namespace CardOrganizer
         private readonly Random _random = new Random();
         public List<ICard> Cards { get; private set; }
 
+        public Deck()
+        {
+                
+        }
+
         public Deck(ICard card)
         {
             _card = card;
@@ -22,7 +27,7 @@ namespace CardOrganizer
         /// <summary>
         /// Creates a new list of ordered cards
         /// </summary>
-        public List<ICard> Create()
+        public virtual List<ICard> Create()
         {
             foreach (int valueSuit in _card.ValueSuits)
             {
@@ -37,7 +42,7 @@ namespace CardOrganizer
         /// <summary>
         ///     Sort a deck of cards
         /// </summary>
-        public List<ICard> Sort()
+        public virtual List<ICard> Sort()
         {
             return Cards = Cards.OrderBy(a => a.ValueSuit).ThenBy(b => b.ValueName).ToList();
         }
@@ -60,7 +65,7 @@ namespace CardOrganizer
         /// <param name="_cards">list of cards to swap and element position</param>
         /// <param name="i">Initial item</param>
         /// <param name="j">Swapped location</param>
-        private void Swap(List<ICard> cards, int i, int j)
+        public void Swap(List<ICard> cards, int i, int j)
         {
             var tempItem = cards[i];
             cards[i] = cards[j];
