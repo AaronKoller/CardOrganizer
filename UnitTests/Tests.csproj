@@ -49,9 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IntegrationTests\Models\DeckIntegrationTests.cs" />
-    <Compile Include="UnitTests\GameUnitTests.cs" />
-    <Compile Include="UnitTests\Models\CardClassicUnitTests.cs" />
-    <Compile Include="UnitTests\Models\DeckUnitTests.cs" />
+    <Compile Include="UnitTests\CardGame\GameUnitTests.cs" />
+    <Compile Include="UnitTests\CardGame\CardClassicUnitTests.cs" />
+    <Compile Include="UnitTests\CardGame\DeckUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,8 @@
-﻿using CardOrganizer;
+﻿using CardOrganizer.CardGame;
 using Moq;
 using NUnit.Framework;
 
-namespace Tests.UnitTests
+namespace Tests.UnitTests.CardGame
 {
     [TestFixture]
     class GameUnitTests

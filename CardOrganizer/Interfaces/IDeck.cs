@@ -12,6 +12,8 @@ namespace CardOrganizer.Interfaces
 
         List<ICard> Cards { get; }
 
+        void PrintCards();
+
         void Swap(List<ICard> cards, int i, int j);
     }
 }

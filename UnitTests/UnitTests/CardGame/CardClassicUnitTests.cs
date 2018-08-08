@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-using CardOrganizer.Models;
+using CardOrganizer.CardGame;
 using NUnit.Framework;
 
-namespace UnitTests.Models
+namespace Tests.UnitTests.CardGame
 {
     [TestFixture]
     class CardClassicTests

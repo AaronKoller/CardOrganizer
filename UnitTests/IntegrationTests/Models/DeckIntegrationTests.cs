@@ -1,7 +1,6 @@
 ﻿using System;
-using CardOrganizer;
+using CardOrganizer.CardGame;
 using CardOrganizer.Interfaces;
-using CardOrganizer.Models;
 using NUnit.Framework;
 
 namespace Tests.IntegrationTests.Models
@@ -25,7 +24,7 @@ namespace Tests.IntegrationTests.Models
         public void Create_multipleCreates_returnsSingleInstanceOfCards()
         {
             //Arrange
-            int countOfCardsBefore =  _deck.Cards.Count;
+            int countOfCardsBefore = _deck.Cards.Count;
 
             //Act
             _deck.Create();
@@ -47,8 +46,8 @@ namespace Tests.IntegrationTests.Models
             //Assert
             for (int i = 0; i < _deck.Cards.Count; i++)
             {
-                Assert.AreEqual(_deck.Cards[i].ValueName, _deck2.Cards[i].ValueName);
-                Assert.AreEqual(_deck.Cards[i].ValueSuit, _deck2.Cards[i].ValueSuit);
+                Assert.AreEqual(_deck.Cards[i].NumericName, _deck2.Cards[i].NumericName);
+                Assert.AreEqual(_deck.Cards[i].NumericSuit, _deck2.Cards[i].NumericSuit);
             }
         }
 

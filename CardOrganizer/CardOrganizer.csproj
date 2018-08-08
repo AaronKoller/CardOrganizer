@@ -40,13 +40,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IGame.cs" />
-    <Compile Include="Models\Deck.cs" />
-    <Compile Include="Game.cs" />
+    <Compile Include="CardGame\Deck.cs" />
+    <Compile Include="CardGame\Game.cs" />
     <Compile Include="Interfaces\ICard.cs" />
     <Compile Include="Interfaces\IDeck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\CardClassic.cs" />
+    <Compile Include="CardGame\CardClassic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

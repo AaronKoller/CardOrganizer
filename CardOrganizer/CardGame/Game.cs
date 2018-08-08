@@ -1,6 +1,7 @@
-﻿using CardOrganizer.Interfaces;
+﻿using System;
+using CardOrganizer.Interfaces;
 
-namespace CardOrganizer
+namespace CardOrganizer.CardGame
 {
     public class Game : IGame
     {
@@ -17,7 +18,11 @@ namespace CardOrganizer
         public void Start()
         {
             _deck.Shuffle();
+            Console.WriteLine("====Shuffled Cards====");
+            _deck.PrintCards();
             _deck.Sort();
+            Console.WriteLine("====Sorted Cards====");
+            _deck.PrintCards();
         }
     }
 }

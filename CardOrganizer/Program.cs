@@ -27,6 +27,7 @@ namespace CardOrganizer
 
                 //Without Inversion of Control
                 //new Game(new Deck(new CardClassic())).Start();
+
             }
             catch (Exception ex)
             {
@@ -38,8 +39,11 @@ namespace CardOrganizer
                     Console.WriteLine("ERROR MESSAGE: " + ex.Message + Environment.NewLine +
                                       "STACK TRACE " + ex.StackTrace);
             }
-            Console.WriteLine("Press any key to exit.");
-            Console.ReadKey();
+            finally
+            {
+                Console.WriteLine("Press any key to exit.");
+                Console.ReadKey();
+            }
         }
     }
 }

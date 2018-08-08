@@ -4,10 +4,14 @@ namespace CardOrganizer.Interfaces
 {
     public interface ICard
     {
-        int ValueSuit { get; }
+        int NumericSuit { get; }
 
-        int ValueName { get; }
+        int NumericName { get; }
 
+        string Suit { get; }
+
+        string Name { get; }
+        
         IEnumerable<int> ValueSuits { get; }
 
         IEnumerable<int> ValueNames { get; }

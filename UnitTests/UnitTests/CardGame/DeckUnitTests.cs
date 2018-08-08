@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using CardOrganizer;
+using CardOrganizer.CardGame;
 using CardOrganizer.Interfaces;
 using Moq;
 using NUnit.Framework;
 
-namespace Tests.UnitTests.Models
+namespace Tests.UnitTests.CardGame
 {
     class DeckUnitTests
     {

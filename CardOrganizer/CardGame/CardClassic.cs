@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using CardOrganizer.Interfaces;
 
-namespace CardOrganizer.Models
+namespace CardOrganizer.CardGame
 {
     public class CardClassic : ICard
     {
+
         public CardClassic()
         {
         }
@@ -17,12 +18,16 @@ namespace CardOrganizer.Models
             CardName = cardNameClassic;
         }
 
-        public CardSuitClassic CardSuit { get; }
-        public CardNameClassic CardName { get; }
+        private CardSuitClassic CardSuit { get; }
+        private CardNameClassic CardName { get; }
 
+        //returns the names of the suits a
+        public string Suit => CardSuit.ToString();
+        public string Name => CardName.ToString();
+        
         //returns the int value this cards enumeration
-        public int ValueSuit => (int) CardSuit;
-        public int ValueName => (int) CardName;
+        public int NumericSuit => (int) CardSuit;
+        public int NumericName => (int) CardName;
 
         //returns IEnumerable of ints of from enumerations
         public IEnumerable<int> ValueSuits => ((int[])Enum.GetValues(typeof(CardSuitClassic))).ToList();
