@@ -4,9 +4,9 @@ using CardOrganizer.Interfaces;
 
 namespace CardOrganizer
 {
-    internal class Program
+    class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
             //Instantiates AutoFac
             var builder = new ContainerBuilder();
